@@ -1,9 +1,10 @@
 ---
-title: Tema 2 - Documentación con R Markdown
-author: Juan Gabriel Gomila & María Santos
-output: 
+title: "Tema 2 - Documentación con R Markdown"
+author: "Juan Gabriel Gomila & María Santos"
+output:
+  beamer_presentation: default
   ioslides_presentation:
-    widescreen: true
+    widescreen: yes
     css: JB_style.css
     logo: Imgs/LogoCurso.png
 ---

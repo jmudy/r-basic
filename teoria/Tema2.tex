@@ -1,0 +1,1171 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Tema 2 - Documentación con R Markdown},
+  pdfauthor={Juan Gabriel Gomila \& María Santos},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs}
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{Tema 2 - Documentación con R Markdown}
+\author{Juan Gabriel Gomila \& María Santos}
+\date{}
+
+\begin{document}
+\frame{\titlepage}
+
+\hypertarget{introducciuxf3n}{%
+\section{Introducción}\label{introducciuxf3n}}
+
+\begin{frame}{Markdown}
+\protect\hypertarget{markdown}{}
+
+R Markdown. Es un tipo de fichero en el cual podemos intercalar sin
+problema alguno texto, código y fórmulas matemáticas.
+
+Para la mayor parte de las necesidades de este curso, en lo referente a
+la creación y composición de este tipo de ficheros, el documento
+\emph{\href{https://en.support.wordpress.com/markdown-quick-reference/}{Markdown
+Quick Reference}} y la
+\href{http://shiny.rstudio.com/images/rm-cheatsheet.pdf.zip.}{chuleta}
+de R Markdown deberían ser suficientes.
+
+Sin embargo, a lo largo de este curso iremos ampliando estos contenidos
+en algunos temas cuando lo creamos necesario.
+
+Nosotros, en este tema, veremos cómo controlar el comportamiento de los
+bloques de código (chunks) al compilar el fichero R Markdown y cómo
+escribir fórmulas matemáticas bien formateadas.
+
+\end{frame}
+
+\hypertarget{fuxf3rmulas-matemuxe1ticas}{%
+\section{Fórmulas matemáticas}\label{fuxf3rmulas-matemuxe1ticas}}
+
+\begin{frame}[fragile]{Cómo escribir}
+\protect\hypertarget{cuxf3mo-escribir}{}
+
+Para escribir fórmulas matemáticas bien formateadas utilizaremos la
+sintaxis \(\LaTeX\)
+
+\begin{itemize}
+\tightlist
+\item
+  Para tener ecuaciones o fórmulas en el mismo párrafo, escribimos
+  nuestro código entre dos símbolos de dólar:
+  \texttt{\$}código\texttt{\$}
+\item
+  Si queremos tener ecuaciones o fórmulas centradas en un párrafo
+  aparte, escribimos nuestro código entre dos dobles símbolos de dólar:
+  \texttt{\$\$}código\texttt{\$\$}
+\end{itemize}
+
+¡Cuidado! Al escribir una fórmula de la forma indicada anteriormente o
+simplemente texto en R Markdown, los espacios en blanco son
+completamente ignorados. RStudio solamente añade los espacios en blanco
+a partir del significado lógico de sus elementos.
+
+\end{frame}
+
+\begin{frame}[fragile]{Espacios en blanco}
+\protect\hypertarget{espacios-en-blanco}{}
+
+\textbf{Ejemplo}
+
+Para que veáis que RStudio ignora el exceso de espacios en blanco, aquí
+os damos un ejemplo en el que hemos introducido espacios innecesarios:
+
+Código: \texttt{En\ en\ insitituto}\(\ \ \ \ \ \)
+\texttt{nos\ enseñaron\ que\ las\ raíces\ de\ las\ ecuaciones\ de\ tercer\ grado,\ de\ la\ forma\ \$Ax\^{}3+Bx\^{}2+Cx+D=0\$,\ se\ encuentran\ mediante\ \textbackslash{}textit\{la\ Regla\ de\ Ruffini\}.\ Por\ su\ parte,}\(\ \ \ \ \ \ \ \ \ \)
+\texttt{las\ raíces\ de\ las\ ecuaciones\ de\ segundo\ grado\ de\ la\ forma\ \$\textbackslash{}alpha\ x\^{}2+\textbackslash{}beta\ x+\textbackslash{}gamma=0\$\ se\ encuentran\ siguiendo\ la\ fórmula\ \$\$x\ =\ \textbackslash{}frac\{-\textbackslash{}beta\textbackslash{}pm\textbackslash{}sqrt\{\textbackslash{}beta\^{}2}\(\ \ \ \ \ \ \ \ \ \ \ \ \)\texttt{-4\textbackslash{}alpha\textbackslash{}gamma\}\}\{2\textbackslash{}alpha\}\$\$.}
+
+Resultado: En en insitituto nos enseñaron que las raíces de las
+ecuaciones de tercer grado, de la forma \(Ax^3+Bx^2+Cx+D=0\), se
+encuentran mediante \emph{la Regla de Ruffini}. Por su parte, las raíces
+de las ecuaciones de segundo grado de la forma
+\(\alpha x^2+\beta x+\gamma=0\) se encuentran siguiendo la fórmula
+\[x = \frac{-\beta\pm\sqrt{\beta^2    -4\alpha\gamma}}{2\alpha}\].
+
+\end{frame}
+
+\begin{frame}{Símbolos}
+\protect\hypertarget{suxedmbolos}{}
+
+Hay muchísimos símbolos matemáticos que puedes escribirse con la
+sintaxis \(\LaTeX\). En el ejemplo anterior ya os hemos mostrado unos
+pocos. En este tema, nosotros solo veremos los más utilizados.
+
+Para quien quiera ir más allá, aquí os dejamos un
+\href{http://www.ptep-online.com/ctan/symbols.pdf}{documento muy útil}
+con gran cantidad de símbolos de \(\LaTeX\).
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Básico}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---buxe1sico}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Suma & \texttt{+} & \(+\)\tabularnewline
+Resta & \texttt{-} & \(-\)\tabularnewline
+Producto & \texttt{\textbackslash{}cdot} & \(\cdot\)\tabularnewline
+Producto & \texttt{\textbackslash{}times} & \(\times\)\tabularnewline
+División & \texttt{\textbackslash{}div} & \(\div\)\tabularnewline
+Potencia & \texttt{a\^{}\{x\}} & \(a^{x}\)\tabularnewline
+Subíndice & \texttt{a\_\{i\}} & \(a_{i}\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Básico}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---buxe1sico-1}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Fracción & \texttt{\textbackslash{}frac\{a\}\{b\}} &
+\(\frac{a}{b}\)\tabularnewline
+Más menos & \texttt{\textbackslash{}pm} & \(\pm\)\tabularnewline
+Raíz n-ésima & \texttt{\textbackslash{}sqrt{[}n{]}\{x\}} &
+\(\sqrt[n]{x}\)\tabularnewline
+Unión & \texttt{cup} & \(\cup\)\tabularnewline
+Intersección & \texttt{\textbackslash{}cap} & \(\cap\)\tabularnewline
+OR lógico & \texttt{\textbackslash{}vee} & \(\vee\)\tabularnewline
+AND lógico & \texttt{\textbackslash{}wedge} & \(\wedge\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Relaciones}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---relaciones}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Igual & \texttt{=} & \(=\)\tabularnewline
+Aproximado & \texttt{\textbackslash{}approx} &
+\(\approx\)\tabularnewline
+No igual & \texttt{\textbackslash{}ne} & \(\ne\)\tabularnewline
+Mayor que & \texttt{\textgreater{}} & \(>\)\tabularnewline
+Menor que & \texttt{\textless{}} & \(<\)\tabularnewline
+Mayor o igual que & \texttt{\textbackslash{}ge} & \(\ge\)\tabularnewline
+Menor o igual que & \texttt{\textbackslash{}le} & \(\le\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Operadores}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---operadores}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Sumatorio & \texttt{\textbackslash{}sum\_\{i=0\}\^{}\{n\}} &
+\(\sum_{i=0}^{n}\)\tabularnewline
+Productorio & \texttt{\textbackslash{}prod\_\{i=0\}\^{}\{n\}} &
+\(\prod_{i=0}^{n}\)\tabularnewline
+Integral & \texttt{\textbackslash{}int\_\{a\}\^{}\{b\}} &
+\(\int_{a}^{b}\)\tabularnewline
+Unión (grande) & \texttt{\textbackslash{}bigcup} &
+\(\bigcup\)\tabularnewline
+Intersección (grande) & \texttt{\textbackslash{}bigcap} &
+\(\bigcap\)\tabularnewline
+OR lógico (grande) & \texttt{\textbackslash{}bigvee} &
+\(\bigvee\)\tabularnewline
+AND lógico (grande) & \texttt{\textbackslash{}bigwedge} &
+\(\bigwedge\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Delimitadores}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---delimitadores}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Paréntesis & \texttt{()} & \((\ )\)\tabularnewline
+Corchetes & \texttt{{[}{]}} & \([\ ]\)\tabularnewline
+Llaves & \texttt{\textbackslash{}\{\ \textbackslash{}\}} &
+\(\{\ \}\)\tabularnewline
+Diamante & \texttt{\textbackslash{}langle\ \textbackslash{}rangle} &
+\(\langle\ \rangle\)\tabularnewline
+Parte entera por defecto &
+\texttt{\textbackslash{}lfloor\ \textbackslash{}rfloor} &
+\(\lfloor\  \rfloor\)\tabularnewline
+Parte entera por exceso &
+\texttt{\textbackslash{}lceil\ \textbackslash{}rceil} &
+\(\lceil\ \rceil\)\tabularnewline
+Espacio en blanco & \texttt{hola\textbackslash{}\ caracola} &
+\(hola\ caracola\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Letras griegas}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---letras-griegas}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Alpha & \texttt{\textbackslash{}alpha} & \(\alpha\)\tabularnewline
+Beta & \texttt{\textbackslash{}beta} & \(\beta\)\tabularnewline
+Gamma & \texttt{\textbackslash{}gamma\ \textbackslash{}Gamma} &
+\(\gamma\  \Gamma\)\tabularnewline
+Delta & \texttt{\textbackslash{}delta\ \textbackslash{}Delta} &
+\(\delta\  \Delta\)\tabularnewline
+Epsilon & \texttt{\textbackslash{}epsilon} & \(\epsilon\)\tabularnewline
+Epsilon & \texttt{\textbackslash{}varepsilon} &
+\(\varepsilon\)\tabularnewline
+Zeta & \texttt{\textbackslash{}zeta} & \(\zeta\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Letras griegas}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---letras-griegas-1}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Eta & \texttt{\textbackslash{}eta} & \(\eta\)\tabularnewline
+Theta & \texttt{\textbackslash{}theta\ \textbackslash{}Theta} &
+\(\theta\ \Theta\)\tabularnewline
+Kappa & \texttt{\textbackslash{}kappa} & \(\kappa\)\tabularnewline
+Lambda & \texttt{\textbackslash{}lambda\ \textbackslash{}Lambda} &
+\(\lambda\  \Lambda\)\tabularnewline
+Mu & \texttt{\textbackslash{}mu} & \(\mu\)\tabularnewline
+Nu & \texttt{\textbackslash{}nu} & \(\nu\)\tabularnewline
+Xi & \texttt{\textbackslash{}xi\ \textbackslash{}Xi} &
+\(\xi\ \Xi\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Letras griegas}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---letras-griegas-2}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Pi & \texttt{\textbackslash{}pi\ \textbackslash{}Pi} &
+\(\pi\ \Pi\)\tabularnewline
+Rho & \texttt{\textbackslash{}rho} & \(\rho\)\tabularnewline
+Sigma & \texttt{\textbackslash{}sigma\ \textbackslash{}Sigma} &
+\(\sigma\ \Sigma\)\tabularnewline
+Tau & \texttt{\textbackslash{}tau} & \(\tau\)\tabularnewline
+Upsilon & \texttt{\textbackslash{}upsilon\ \textbackslash{}Upsilon} &
+\(\upsilon\ \Upsilon\)\tabularnewline
+Phi & \texttt{\textbackslash{}phi\ \textbackslash{}Phi} &
+\(\phi\ \Phi\)\tabularnewline
+Phi & \texttt{\textbackslash{}varphi} & \(\varphi\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Letras griegas}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---letras-griegas-3}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Chi & \texttt{\textbackslash{}chi} & \(\chi\)\tabularnewline
+Psi & \texttt{\textbackslash{}psi\ \textbackslash{}Psi} &
+\(\psi\ \Psi\)\tabularnewline
+Omega & \texttt{\textbackslash{}omega\ \textbackslash{}Omega} &
+\(\omega\ \Omega\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Acentos matemáticos}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---acentos-matemuxe1ticos}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Gorrito & \texttt{\textbackslash{}hat\{x\}} & \(\hat{x}\)\tabularnewline
+Barra & \texttt{\textbackslash{}bar\{x\}} & \(\bar{x}\)\tabularnewline
+Punto 1 & \texttt{\textbackslash{}dot\{x\}} & \(\dot{x}\)\tabularnewline
+Punto 2 & \texttt{\textbackslash{}ddot\{x\}} &
+\(\ddot{x}\)\tabularnewline
+Punto 3 & \texttt{\textbackslash{}dddot\{x\}} &
+\(\dddot{x}\)\tabularnewline
+Tilde & \texttt{\textbackslash{}tilde\{x\}} &
+\(\tilde{x}\)\tabularnewline
+Vector & \texttt{\textbackslash{}vec\{x\}} & \(\vec{x}\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Acentos expansibles}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---acentos-expansibles}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Gorrito & \texttt{\textbackslash{}widehat\{xyz\}} &
+\(\widehat{xyz}\)\tabularnewline
+Barra & \texttt{\textbackslash{}overline\{xyz\}} &
+\(\overline{xyz}\)\tabularnewline
+Subrallado & \texttt{\textbackslash{}underline\{xyz\}} &
+\(\underline{xyz}\)\tabularnewline
+Llave superior & \texttt{\textbackslash{}overbrace\{xyz\}} &
+\(\overbrace{xyz}\)\tabularnewline
+Llave inferior & \texttt{\textbackslash{}underbrace\{xyz\}} &
+\(\underbrace{xyz}\)\tabularnewline
+Tilde & \texttt{\textbackslash{}widetilde\{xyz\}} &
+\(\widetilde{xyz}\)\tabularnewline
+Vector & \texttt{\textbackslash{}overrightarrow\{xyz\}} &
+\(\overrightarrow{xyz}\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Flechas}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---flechas}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+\begin{minipage}[b]{0.30\columnwidth}\raggedright
+Significado\strut
+\end{minipage} & \begin{minipage}[b]{0.30\columnwidth}\raggedright
+Código\strut
+\end{minipage} & \begin{minipage}[b]{0.30\columnwidth}\raggedright
+Resultado\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+Simple\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\texttt{\textbackslash{}leftarrow\ \textbackslash{}rightarrow}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\(\leftarrow\ \rightarrow\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+Doble\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\texttt{\textbackslash{}Leftarrow\ \textbackslash{}Rightarrow}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\(\Leftarrow\ \Rightarrow\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+Simple larga\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\texttt{\textbackslash{}longleftarrow\ \textbackslash{}longrightarrow}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\(\longleftarrow\  \longrightarrow\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+Doble larga\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\texttt{\textbackslash{}Longleftarrow\ \textbackslash{}Longrightarrow}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\(\Longleftarrow\ \Longrightarrow\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+Doble sentido simple\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\texttt{\textbackslash{}leftrightarrow}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\(\leftrightarrow\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+Doble sentido doble\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\texttt{\textbackslash{}Leftrightarrow}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\(\Leftrightarrow\)\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Flechas}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---flechas-1}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Doble sentido larga simple & \texttt{\textbackslash{}longleftrightarrow}
+& \(\longleftrightarrow\)\tabularnewline
+Doble sentido larga doble & \texttt{\textbackslash{}Longleftrightarrow}
+& \(\Longleftrightarrow\)\tabularnewline
+Mapea & \texttt{\textbackslash{}mapsto} & \(\mapsto\)\tabularnewline
+Arriba & \texttt{\textbackslash{}uparrow} & \(\uparrow\)\tabularnewline
+Abajo & \texttt{\textbackslash{}downarrow} &
+\(\downarrow\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Funciones}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---funciones}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Seno & \texttt{\textbackslash{}sin} & \(\sin\)\tabularnewline
+Coseno & \texttt{\textbackslash{}cos} & \(\cos\)\tabularnewline
+Tangente & \texttt{\textbackslash{}tan} & \(\tan\)\tabularnewline
+Arcoseno & \texttt{\textbackslash{}arcsin} & \(\arcsin\)\tabularnewline
+Arcocoseno & \texttt{\textbackslash{}arccos} &
+\(\arccos\)\tabularnewline
+Arcotangente & \texttt{\textbackslash{}arctan} &
+\(\arctan\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Funciones}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---funciones-1}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Exponencial & \texttt{\textbackslash{}exp} & \(\exp\)\tabularnewline
+Logaritmo & \texttt{\textbackslash{}log} & \(\log\)\tabularnewline
+Logaritmo neperiano & \texttt{\textbackslash{}ln} &
+\(\ln\)\tabularnewline
+Máximo & \texttt{\textbackslash{}max} & \(\max\)\tabularnewline
+Mínimo & \texttt{\textbackslash{}min} & \(\min\)\tabularnewline
+Límite & \texttt{\textbackslash{}lim} & \(\lim\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Funciones}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---funciones-2}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Supremo & \texttt{\textbackslash{}sup} & \(\sup\)\tabularnewline
+Ínfimo & \texttt{\textbackslash{}inf} & \(\inf\)\tabularnewline
+Determinante & \texttt{\textbackslash{}det} & \(\det\)\tabularnewline
+Argumento & \texttt{\textbackslash{}arg} & \(\arg\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Otros}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---otros}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Puntos suspensivos bajos & \texttt{\textbackslash{}ldots} &
+\(\ldots\)\tabularnewline
+Puntos suspensivos centrados & \texttt{\textbackslash{}cdots} &
+\(\cdots\)\tabularnewline
+Puntos suspensivos verticales & \texttt{\textbackslash{}vdots} &
+\(\vdots\)\tabularnewline
+Puntos suspensivos diagonales & \texttt{\textbackslash{}ddots} &
+\(\ddots\)\tabularnewline
+Cuantificador existencial & \texttt{\textbackslash{}exists} &
+\(\exists\)\tabularnewline
+Cuantificador universal & \texttt{\textbackslash{}forall} &
+\(\forall\)\tabularnewline
+Infinito & \texttt{\textbackslash{}infty} & \(\infty\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Otros}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---otros-1}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Aleph & \texttt{\textbackslash{}aleph} & \(\aleph\)\tabularnewline
+Conjunto vacío & \texttt{\textbackslash{}emptyset} &
+\(\emptyset\)\tabularnewline
+Negación & \texttt{\textbackslash{}neg} & \(\neg\)\tabularnewline
+Barra invertida & \texttt{\textbackslash{}backslash} &
+\(\backslash\)\tabularnewline
+Dollar & \texttt{\textbackslash{}\$} & \(\$\)\tabularnewline
+Porcentaje & \texttt{\textbackslash{}\%} & \(\%\)\tabularnewline
+Parcial & \texttt{\textbackslash{}partial} & \(\partial\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Símbolos matemáticos - Tipos de letra}
+\protect\hypertarget{suxedmbolos-matemuxe1ticos---tipos-de-letra}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Significado & Código & Resultado\tabularnewline
+\midrule
+\endhead
+Negrita & \texttt{\textbackslash{}mathbf\{palabra\}} &
+\(\mathbf{palabra}\)\tabularnewline
+Negrita & \texttt{\textbackslash{}boldsymbol\{palabra\}} &
+\(\boldsymbol{palabra}\)\tabularnewline
+Negrita de pizarra & \texttt{\textbackslash{}mathbb\{NZQRC\}} &
+\(\mathbb{NZQRC}\)\tabularnewline
+Caligráfica & \texttt{\textbackslash{}mathcal\{NZQRC\}} &
+\(\mathcal{NZQRC}\)\tabularnewline
+Gótica & \texttt{\textbackslash{}mathfrak\{NZQRC\}} &
+\(\mathfrak{NZQRC}\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Observaciones}
+\protect\hypertarget{observaciones}{}
+
+\begin{itemize}
+\item
+  A la hora de componer en el interior de un párrafo una fracción,
+  existen dos formas: adaptada al tamaño del
+  texto,\texttt{\$\textbackslash{}frac\{a\}\{b\}\$}, que resulta en
+  \(\frac{a}{b}\); o a tamaño real,
+  \texttt{\$\textbackslash{}dfrac\{a\}\{b\}\$}, que da lugar a
+  \(\dfrac{a}{b}\).
+\item
+  Podemos especificar que los delimitadores se adapten a la altura de la
+  expresión que envuelven utilizando \texttt{\textbackslash{}left} y
+  \texttt{\textbackslash{}right}. Observad el cambio en el siguiente
+  ejemplo: \texttt{\$(\textbackslash{}dfrac\{a\}\{b\})\$} y
+  \texttt{\$\textbackslash{}left(\textbackslash{}dfrac\{a\}\{b\}\textbackslash{}right)\$}
+  producen, respectivamente \((\dfrac{a}{b})\) y
+  \(\left(\dfrac{a}{b}\right)\).
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Matrices}
+\protect\hypertarget{matrices}{}
+
+\texttt{\$\$\textbackslash{}begin\{matrix\}\ a\_\{11\}\ \&\ a\_\{12\}\ \&\ a\_\{13\}\textbackslash{}\textbackslash{}\ a\_\{21\}\ \&\ a\_\{22\}\ \&\ a\_\{23\}\ \textbackslash{}end\{matrix\}\$\$}
+
+\[\begin{matrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}
+\end{matrix}\]
+
+\texttt{\$\$\textbackslash{}begin\{pmatrix\}\ a\_\{11\}\ \&\ a\_\{12\}\ \&\ a\_\{13\}\textbackslash{}\textbackslash{}\ a\_\{21\}\ \&\ a\_\{22\}\ \&\ a\_\{23\}\ \textbackslash{}end\{pmatrix\}\$\$}
+
+\[\begin{pmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}
+\end{pmatrix}\]
+
+\end{frame}
+
+\begin{frame}[fragile]{Matrices}
+\protect\hypertarget{matrices-1}{}
+
+\texttt{\$\$\textbackslash{}begin\{vmatrix\}\ a\_\{11\}\ \&\ a\_\{12\}\ \&\ a\_\{13\}\textbackslash{}\textbackslash{}\ a\_\{21\}\ \&\ a\_\{22\}\ \&\ a\_\{23\}\ \textbackslash{}end\{vmatrix\}\$\$}
+
+\[\begin{vmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}
+\end{vmatrix}\]
+
+\texttt{\$\$\textbackslash{}begin\{bmatrix\}\ a\_\{11\}\ \&\ a\_\{12\}\ \&\ a\_\{13\}\textbackslash{}\textbackslash{}\ a\_\{21\}\ \&\ a\_\{22\}\ \&\ a\_\{23\}\ \textbackslash{}end\{bmatrix\}\$\$}
+
+\[\begin{bmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}
+\end{bmatrix}\]
+
+\end{frame}
+
+\begin{frame}[fragile]{Matrices}
+\protect\hypertarget{matrices-2}{}
+
+\texttt{\$\$\textbackslash{}begin\{Bmatrix\}\ a\_\{11\}\ \&\ a\_\{12\}\ \&\ a\_\{13\}\textbackslash{}\textbackslash{}\ a\_\{21\}\ \&\ a\_\{22\}\ \&\ a\_\{23\}\ \textbackslash{}end\{Bmatrix\}\$\$}
+
+\[\begin{Bmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}
+\end{Bmatrix}\]
+
+\texttt{\$\$\textbackslash{}begin\{Vmatrix\}\ a\_\{11\}\ \&\ a\_\{12\}\ \&\ a\_\{13\}\textbackslash{}\textbackslash{}\ a\_\{21\}\ \&\ a\_\{22\}\ \&\ a\_\{23\}\ \textbackslash{}end\{Vmatrix\}\$\$}
+
+\[\begin{Vmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}
+\end{Vmatrix}\]
+
+\end{frame}
+
+\begin{frame}[fragile]{Sistema de ecuaciones}
+\protect\hypertarget{sistema-de-ecuaciones}{}
+
+\texttt{\textbackslash{}begin\{array\}\{l\}\textbackslash{}end\{array\}}
+nos produce una tabla alineada a la izquierda. El hecho de introducir el
+código \texttt{\textbackslash{}left.\ \textbackslash{}right.} hace que
+el delimitador respectivo no aparezca.
+
+\texttt{\$\$\textbackslash{}left.\textbackslash{}begin\{array\}\{l\}\ ax+by=c\textbackslash{}\textbackslash{}\ ex-fy=g\ \textbackslash{}end\{array\}\textbackslash{}right\textbackslash{}\}\$\$}
+
+\[\left.\begin{array}{l}
+ax+by=c\\
+ex-fy=g
+\end{array}\right\}\]
+
+\texttt{\$\$\textbar{}x\textbar{}=\textbackslash{}left\textbackslash{}\{\textbackslash{}begin\{array\}\{l\}\ -x\ \&\ \textbackslash{}text\{si\ \}x\textbackslash{}le\ 0\textbackslash{}\textbackslash{}\ x\ \&\ \textbackslash{}text\{si\ \}x\textbackslash{}ge\ 0\ \textbackslash{}end\{array\}\textbackslash{}right.\$\$}
+
+\[|x|=\left\{\begin{array}{l}
+-x & \text{si }x\le 0\\
+x & \text{si }x\ge 0
+\end{array}\right.\]
+
+La función \texttt{text\{\}} nos permite introducir texto en fórmulas
+matemáticas.
+
+\end{frame}
+
+\hypertarget{paruxe1metros-de-los-chuncks-de-r}{%
+\section{Parámetros de los chuncks de
+R}\label{paruxe1metros-de-los-chuncks-de-r}}
+
+\begin{frame}[fragile]{Chunks de R}
+\protect\hypertarget{chunks-de-r}{}
+
+Chunk. Bloque de código.
+
+Los bloques de código de R dentro de un documento R Markdown se indican
+de la manera siguiente
+
+\begin{verbatim}
+
+` x = 1+1`
+
+` x`
+
+```</div>
+
+que resulta en
+
+
+```r
+x = 1+1
+x
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}{Chunks de R}
+\protect\hypertarget{chunks-de-r-1}{}
+
+Hay diversas opciones de crear un bloque de código de R:
+
+\begin{itemize}
+\tightlist
+\item
+  Ir al menú desplegable de ``Chunks'' y seleccionar el de R
+\item
+  Introducir manualmente
+\item
+  Alt + Command + I (para Mac) o Alt + Control + I (para Windows)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Chunks de R}
+\protect\hypertarget{chunks-de-r-2}{}
+
+A los chunks se les puede poner etiqueta, para así localizarlos de
+manera más fácil. Por ejemplo
+
+```\{r PrimerChunk\}
+
+\texttt{x\ =\ 1+2+3}
+
+\begin{verbatim}
+
+\n
+
+
+<div class = "r-code">
+```{r SegundoChunk}
+
+` y = 1*2*3`
+
+```</div>
+
+
+
+
+## Parámetros de los chunks
+
+La parte entre llaves también puede contener diversos parámetros, separados por comas entre ellos y separados de la etiqueta (o de r, si hemos decidido no poner ninguna).
+
+Estos parámetros determinan el comportamiento del bloque al compilar el documento pulsando el botón `Knit` situado en la barra superior del área de trabajo.
+
+## Parámetros de los chunks
+
+Código |  Significado                                  
+--------------------|--------------------
+`echo` | Si lo igualamos a `TRUE`, que es el valor por defecto, estaremos diciendo que queremos que se muestre el código fuente del chunk. En cambio, igualado a `FALSE`, no se mostrará
+`eval` | Si lo igualamos a `TRUE`, que es el valor por defecto, estaremos diciendo que queremos que se evalúe el código. En cambio, igualado a `FALSE`, no se evaluará
+`message` | Nos permite indicar si queremos que se muestren los mensajes que R produce al ejecutar código. Igualado a `TRUE` se muestran, igualado a `FALSE` no
+`warning` | Nos permite indicar si queremos que se muestren los mensajes de advertencia que producen algunas funciones al ejecutarse. Igualado a `TRUE` se muestran, igualado a `FALSE` no
+
+## Parámetros de los chunks
+
+<div class = "r-code">
+```{r, echo=FALSE}
+
+` sec = 10:20`
+
+`sec`
+
+`cumsum(sec)`
+
+```</div>
+
+\n
+
+No aparece
+
+## Parámetros de los chunks
+
+<div class = "r-code">
+```{r, echo=TRUE, message = TRUE}
+
+`library(car)`
+
+`head(cars,3)`
+
+```</div>
+
+\n
+
+
+```r
+library(car)
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: carData
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{head}\NormalTok{(cars,}\DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   speed dist
+## 1     4    2
+## 2     4   10
+## 3     7    4
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]{Parámetros de los chunks}
+\protect\hypertarget{paruxe1metros-de-los-chunks}{}
+
+```\{r, echo=TRUE, message = FALSE, comment = NA\}
+
+\texttt{library(car)}
+
+\texttt{head(cars,3)}
+
+\begin{verbatim}
+
+\n
+
+
+```r
+library(car)
+head(cars,3)
+\end{verbatim}
+
+\begin{verbatim}
+  speed dist
+1     4    2
+2     4   10
+3     7    4
+\end{verbatim}
+
+Fijaos que \texttt{comment=NA} evita que aparezcan los \texttt{\#\#}
+
+\end{frame}
+
+\begin{frame}[fragile]{Parámetros de los chunks}
+\protect\hypertarget{paruxe1metros-de-los-chunks-1}{}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+\begin{minipage}[b]{0.30\columnwidth}\raggedright
+Significado\strut
+\end{minipage} & \begin{minipage}[b]{0.30\columnwidth}\raggedright
+Código\strut
+\end{minipage} & \begin{minipage}[b]{0.30\columnwidth}\raggedright
+Resultado\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\texttt{results}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\texttt{markup}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+Valor por defecto. Nos muestra los resultados en el documento final
+línea a línea, encabezados por \texttt{\#\#}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\texttt{results}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\texttt{hide}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+No se nos muestra el resultado en el documento final\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\texttt{results}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\texttt{asis}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+Nos devuelve los resultados línea a línea de manera literal en el
+documento final y el programa con el que se abre el documento final los
+interpreta como texto y formatea adecuadamente\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\texttt{results}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\texttt{hold}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+Miestra todos los resultados al final del bloque de código\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Parámetros de los chunks}
+\protect\hypertarget{paruxe1metros-de-los-chunks-2}{}
+
+```\{r, echo=TRUE, results = ``markup''\}
+
+\texttt{sec\ =\ 10:20}
+
+\texttt{sec}
+
+\texttt{cumsum(sec)}
+
+\begin{verbatim}
+
+\n
+
+
+```r
+sec = 10:20
+sec
+\end{verbatim}
+
+\begin{verbatim}
+##  [1] 10 11 12 13 14 15 16 17 18 19 20
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{cumsum}\NormalTok{(sec)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1]  10  21  33  46  60  75  91 108 126 145 165
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]{Parámetros de los chunks}
+\protect\hypertarget{paruxe1metros-de-los-chunks-3}{}
+
+```\{r, echo=TRUE, results = ``hide''\}
+
+\texttt{sec\ =\ 10:20}
+
+\texttt{sec}
+
+\texttt{cumsum(sec)}
+
+\begin{verbatim}
+
+\n
+
+
+```r
+sec = 10:20
+sec
+cumsum(sec)
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]{Parámetros de los chunks}
+\protect\hypertarget{paruxe1metros-de-los-chunks-4}{}
+
+```\{r, echo=TRUE, results = ``asis''\}
+
+\texttt{sec\ =\ 10:20}
+
+\texttt{sec}
+
+\texttt{cumsum(sec)}
+
+\begin{verbatim}
+
+\n
+
+
+```r
+sec = 10:20
+sec
+\end{verbatim}
+
+{[}1{]} 10 11 12 13 14 15 16 17 18 19 20
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{cumsum}\NormalTok{(sec)}
+\end{Highlighting}
+\end{Shaded}
+
+{[}1{]} 10 21 33 46 60 75 91 108 126 145 165
+
+\end{frame}
+
+\begin{frame}[fragile]{Parámetros de los chunks}
+\protect\hypertarget{paruxe1metros-de-los-chunks-5}{}
+
+```\{r, echo=TRUE, results = ``hold''\}
+
+\texttt{sec\ =\ 10:20}
+
+\texttt{sec}
+
+\texttt{cumsum(sec)}
+
+\begin{verbatim}
+
+\n
+
+
+```r
+sec = 10:20
+sec
+cumsum(sec)
+\end{verbatim}
+
+\begin{verbatim}
+##  [1] 10 11 12 13 14 15 16 17 18 19 20
+##  [1]  10  21  33  46  60  75  91 108 126 145 165
+\end{verbatim}
+
+\end{frame}
+
+\hypertarget{los-chunks-en-modo-luxednea}{%
+\section{Los chunks en modo línea}\label{los-chunks-en-modo-luxednea}}
+
+\begin{frame}[fragile]{Los chunks en modo línea}
+\protect\hypertarget{los-chunks-en-modo-luxednea-1}{}
+
+Con lo explicado hasta ahora, solamente hemos generado resultados en la
+línea aparte
+
+Para introducir una parte de código dentro de un párrafo y que se
+ejecute al comilarse el documento mostrando así el resultado final, hay
+que hacerlo utilizando \texttt{\textasciigrave{}r\ ...\textasciigrave{}}
+
+\textbf{Ejemplo}
+
+La raíz cuadrada de 64 es
+\texttt{\textasciigrave{}r\ sqrt(64)\textasciigrave{}} o, lo que viene
+siendo lo mismo,
+\(\sqrt{64}=\)\texttt{\textasciigrave{}r\ sqrt(64)\textasciigrave{}}
+
+La raíz quinta de 32 es 8 o, lo que viene siendo lo mismo,
+\$\sqrt{64}=\$5.6568542
+
+\end{frame}
+
+\end{document}
