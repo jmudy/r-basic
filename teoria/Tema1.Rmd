@@ -2,13 +2,13 @@
 title: "Tema 1 - Trabajando con R"
 author: "Juan Gabriel Gomila & María Santos"
 output:
+  beamer_presentation: 
+    keep_tex: yes
+  slidy_presentation: default
   ioslides_presentation:
     widescreen: yes
     css: JB_style.css
     logo: Imgs/LogoCurso.png
-  slidy_presentation: default
-  beamer_presentation: 
-    keep_tex: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -130,7 +130,7 @@ Código |  Operación
 
 Código |  Significado                                 
 --------------------|--------------------
-```pi``` | [$\pi$](https://es.wikipedia.org/wiki/Número_π) 
+
 `Inf` | [$\infty$](https://es.wikipedia.org/wiki/Infinito)
 `NaN` | Indeterminación (Not a Number)
 `NA` | Valor desconocido (Not Available)
