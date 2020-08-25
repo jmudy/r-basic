@@ -1,3 +1,5 @@
+##OPERACIONES BASICAS
+
 2*(3+5/2)
 
 2*((3+5)/2)
@@ -47,6 +49,8 @@ NaN # Not a Number
 
 c(2^30, 2^-15, 2, 3/2)
 
+##FUNCIONES Y COMBINATORIA CON RSTUDIO
+
 sqrt(9)
 
 exp(1)
@@ -75,6 +79,8 @@ log(4^6,4)
 
 log (base = 2, x = 32) #se puede invertir el orden siempre que se especifique "base =" y "x ="
 
+##FUNCIONES TRIGONOMETRICAS
+
 #operaciones trigonometricas son en radianes
 sin(pi/2)
 
@@ -101,6 +107,8 @@ asin(0.8660254) * 180/pi # arc sin en grados
 
 asin(5) # sale error porque arc sin x in [-1,1]
 
+acos(-8) # no funciona evidentemente
+
 #Un pequeño adelanto
 x = seq(0,2*pi,0.1)
 plot(x,sin(x),type='l',col="blue",lwd=3, xlab=expression(x), ylab="")
@@ -108,6 +116,8 @@ lines(x,cos(x),col="green",lwd=3)
 lines(x,tan(x),col="purple",lwd=3)
 legend("bottomleft",col=c("blue","green","purple"),
        legend=c("Seno","Coseno","Tangente"),lwd=3,bty="l")
+
+##REDONDEO Y DECIMALES EN R
 
 print(sqrt(2),10) #raiz cuadrada de 2 con 10 digitos
 round(sqrt(2),3) #redondeo a 3 cifras significativas
@@ -210,3 +220,7 @@ ls()
 rm(product)
 
 rm(list = ls()) #para eliminar todas las variables y funciones del entorno
+
+##NUMEROS COMPLEJOS
+
+
