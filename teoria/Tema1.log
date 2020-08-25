@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.23)  24 AUG 2020 02:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.23)  25 AUG 2020 02:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1427,8 +1427,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-No file Tema1.nav.
-[1
+(./Tema1.nav) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
@@ -1447,10 +1446,10 @@ Type  H <return>  for immediate help.
 l.180 \end{frame}
                   
 Here is how much of TeX's memory you used:
- 24416 strings out of 492982
- 433049 string characters out of 6134896
+ 24489 strings out of 492982
+ 433628 string characters out of 6134896
  520648 words of memory out of 5000000
- 27534 multiletter control sequences out of 15000+600000
+ 27605 multiletter control sequences out of 15000+600000
  19087 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,11n,55p,793b,376s stack positions out of 5000i,500n,10000p,200000b,80000s

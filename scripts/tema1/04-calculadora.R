@@ -73,6 +73,8 @@ abs(-pi)
 #operacion opuesta
 log(4^6,4)
 
+log (base = 2, x = 32) #se puede invertir el orden siempre que se especifique "base =" y "x ="
+
 #operaciones trigonometricas son en radianes
 sin(pi/2)
 
@@ -106,4 +108,105 @@ lines(x,cos(x),col="green",lwd=3)
 lines(x,tan(x),col="purple",lwd=3)
 legend("bottomleft",col=c("blue","green","purple"),
        legend=c("Seno","Coseno","Tangente"),lwd=3,bty="l")
-       
+
+print(sqrt(2),10) #raiz cuadrada de 2 con 10 digitos
+round(sqrt(2),3) #redondeo a 3 cifras significativas
+floor(sqrt(2)) #redondea a la baja
+ceiling(sqrt(2)) #redondeo a la alza
+trunc(sqrt(2)) #otra forma donde se queda con la parte entera solo, elimina la parte decimal
+
+sqrt(2)^2-2
+
+2^50
+print(2^50,15)
+print(2^50,2)
+print(pi,22) #a partir de 16 digitos es poco exacto R
+
+round(sqrt(2),4)^2
+
+round(1.15,1)
+round(1.25,1)
+round(1.35,1)
+round(sqrt(2),0) #si no se indica el numero de digitos decimales lo considera 0 y solo sale la parte entera
+round(digits = 5,sqrt(2))
+
+floor(-3.45)
+ceiling(-3.45)
+trunc(-3.45) #elimina la parte decimal y se queda con la parte entera
+
+##VARIABLES
+
+x = (pi^2)/2
+x
+
+y <- cos(pi/4)
+y
+
+sin(pi/4) + cos(pi/4) -> z
+z
+
+edad <- 30
+nombre = "Jesus Mudarra"
+
+HOLA = 1
+hola = 5
+
+#en los nombres de las variables no se puede mezclar letras y numeros, si no da error
+
+pi.4 = 4*pi
+pi.4
+
+x=2
+x=x^2
+
+x=sqrt(x)
+
+##FUNCIONES
+
+miVariable = 4
+doble = function(x){2*x} #poner siempre las llaves
+doble(miVariable) #aplico mi funcion doble a la variable miVariable
+cuadrado = function(x){x^2}
+cuadrado(miVariable)
+
+#Funcion f(x) = x^3 - (3^x)*sin(x)
+f=function(x){
+  x^3 - (3^x)*sin(x)
+  }
+
+#para guardar la funcion de arriba se tiene que poner el cursor del raton sobre la palabra function
+
+f(4) # 4^3 - (3^4)*sin(4)
+f(5)
+f(pi/2)
+
+suma1 <- function(t){
+  t+1
+}
+suma1(6)
+suma1(-5)
+
+product <-function(x, y){
+  x*y
+}
+product(5,7)  
+
+g <- function(x,y,z){
+  exp(x^2 + y^2) * sin(z)
+}
+g(1,2,3)
+g(1,-1,pi)
+
+suma5 <- function(numero){
+  numero = suma1(numero);
+  numero = suma1(numero);
+  numero = suma1(numero);
+  numero = suma1(numero);
+  suma1(numero)
+}
+suma5(3)
+
+ls()
+rm(product)
+
+rm(list = ls()) #para eliminar todas las variables y funciones del entorno

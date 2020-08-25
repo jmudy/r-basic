@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{Conociendo R}{2}{0}{1}
+\beamer@sectionintoc {2}{Utilizando R como calculadora}{10}{0}{2}
