@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.25)  25 AUG 2020 12:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.25)  25 AUG 2020 12:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Tema2.tex
-(./Tema2.tex
+**Tema11.tex
+(./Tema11.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-08-07> (/home/jesus/.TinyTeX/texmf-dist/tex/latex/be
 amer/beamer.cls
@@ -665,73 +665,58 @@ Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@posthook=\toks45
 ) (/home/jesus/.TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-) (/home/jesus/.TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count320
-\FV@InFile=\read3
-\FV@TabBox=\box74
-\c@FancyVerbLine=\count321
-\FV@StepNumber=\count322
-\FV@OutFile=\write5
-) (/home/jesus/.TinyTeX/texmf-dist/tex/latex/framed/framed.sty
-Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip66
-\fb@frw=\dimen281
-\fb@frh=\dimen282
-\FrameRule=\dimen283
-\FrameSep=\dimen284
 ) (/home/jesus/.TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
-\LTleft=\skip67
-\LTright=\skip68
-\LTpre=\skip69
-\LTpost=\skip70
-\LTchunksize=\count323
-\LTcapwidth=\dimen285
-\LT@head=\box75
-\LT@firsthead=\box76
-\LT@foot=\box77
-\LT@lastfoot=\box78
-\LT@cols=\count324
-\LT@rows=\count325
-\c@LT@tables=\count326
-\c@LT@chunks=\count327
+\LTleft=\skip66
+\LTright=\skip67
+\LTpre=\skip68
+\LTpost=\skip69
+\LTchunksize=\count320
+\LTcapwidth=\dimen281
+\LT@head=\box74
+\LT@firsthead=\box75
+\LT@foot=\box76
+\LT@lastfoot=\box77
+\LT@cols=\count321
+\LT@rows=\count322
+\c@LT@tables=\count323
+\c@LT@chunks=\count324
 \LT@p@ftn=\toks46
 ) (/home/jesus/.TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen286
-\lightrulewidth=\dimen287
-\cmidrulewidth=\dimen288
-\belowrulesep=\dimen289
-\belowbottomsep=\dimen290
-\aboverulesep=\dimen291
-\abovetopsep=\dimen292
-\cmidrulesep=\dimen293
-\cmidrulekern=\dimen294
-\defaultaddspace=\dimen295
-\@cmidla=\count328
-\@cmidlb=\count329
-\@aboverulesep=\dimen296
-\@belowrulesep=\dimen297
-\@thisruleclass=\count330
-\@lastruleclass=\count331
-\@thisrulewidth=\dimen298
+\heavyrulewidth=\dimen282
+\lightrulewidth=\dimen283
+\cmidrulewidth=\dimen284
+\belowrulesep=\dimen285
+\belowbottomsep=\dimen286
+\aboverulesep=\dimen287
+\abovetopsep=\dimen288
+\cmidrulesep=\dimen289
+\cmidrulekern=\dimen290
+\defaultaddspace=\dimen291
+\@cmidla=\count325
+\@cmidlb=\count326
+\@aboverulesep=\dimen292
+\@belowrulesep=\dimen293
+\@thisruleclass=\count327
+\@lastruleclass=\count328
+\@thisrulewidth=\dimen294
 ) (/home/jesus/.TinyTeX/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/05/30 v3.4k Customizing captions (AR)
 (/home/jesus/.TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/07/20 v1.12b caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
-\captionmargin=\dimen299
-\captionmargin@=\dimen300
-\captionwidth=\dimen301
-\caption@tempdima=\dimen302
-\caption@indent=\dimen303
-\caption@parindent=\dimen304
-\caption@hangindent=\dimen305
+\captionmargin=\dimen295
+\captionmargin@=\dimen296
+\captionwidth=\dimen297
+\caption@tempdima=\dimen298
+\caption@indent=\dimen299
+\caption@parindent=\dimen300
+\caption@hangindent=\dimen301
 Package caption Info: beamer document class detected.
 )
-\c@caption@flags=\count332
-\c@continuedfloat=\count333
+\c@caption@flags=\count329
+\c@continuedfloat=\count330
 Package caption Info: beamer document class.
 Package caption Info: hyperref package is loaded.
 Package caption Info: Hyperref support is turned off
@@ -739,32 +724,37 @@ Package caption Info: Hyperref support is turned off
 Package caption Info: longtable package is loaded.
 (/home/jesus/.TinyTeX/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
-)) (/home/jesus/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+)) (/home/jesus/.TinyTeX/texmf-dist/tex/latex/grffile/grffile.sty
+Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legac
+y)
+Package grffile Info: This package is an empty stub for compatibility on input 
+line 40.
+) (/home/jesus/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-08-07 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count334
-\l__pdf_internal_box=\box79
+\l__kernel_color_stack_int=\count331
+\l__pdf_internal_box=\box78
 )
-No file Tema2.aux.
-\openout1 = `Tema2.aux'.
+No file Tema11.aux.
+\openout1 = `Tema11.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -807,8 +797,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 )) ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box80
-Package hyperref Info: Link coloring OFF on input line 139.
+\AtBeginShipoutBox=\box79
+Package hyperref Info: Link coloring OFF on input line 112.
 (/home/jesus/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/home/jesus/.TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -817,60 +807,60 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 y
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count335
+\c@section@level=\count332
 )
-LaTeX Info: Redefining \ref on input line 139.
-LaTeX Info: Redefining \pageref on input line 139.
-LaTeX Info: Redefining \nameref on input line 139.
-\@outlinefile=\write6
-\openout6 = `Tema2.out'.
+LaTeX Info: Redefining \ref on input line 112.
+LaTeX Info: Redefining \pageref on input line 112.
+LaTeX Info: Redefining \nameref on input line 112.
+\@outlinefile=\write5
+\openout5 = `Tema11.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 139.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 112.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 139.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 112.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 139.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 112.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 139.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 112.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 139.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 139.
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 112.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 112.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 139.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 112.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 139.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 139.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 112.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 112.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 139.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 112.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 139.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 139.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 112.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 112.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 139.
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 112.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 139.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 139.
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 112.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 112.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 139.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 112.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 139.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 112.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 139.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 112.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 139.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 112.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 139.
+(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 112.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 139.
+(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 112.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 139.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 112.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 139.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 112.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 139.
+(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 112.
 
 (/home/jesus/.TinyTeX/texmf-dist/tex/latex/translator/translator-basic-dictiona
 ry-English.dict
@@ -898,72 +888,190 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-No file Tema2.nav.
+No file Tema11.nav.
 [1
 
 {/home/jesus/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 165.
-[3
-
-] [4
-
-]
-\openout4 = `Tema2.vrb'.
-
-(./Tema2.vrb
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-5.
+139.
 (/home/jesus/.TinyTeX/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
-.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+39.
 (/home/jesus/.TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-5.
+139.
 (/home/jesus/.TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-5.
+139.
 (/home/jesus/.TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 5.
+(Font)              <10.95> on input line 139.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 5.
+(Font)              <8> on input line 139.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 5.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+(Font)              <6> on input line 139.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 139
+.
 (/home/jesus/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 139
+.
 (/home/jesus/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 139.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 5.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 139.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 5.
-! You can't use `\spacefactor' in math mode.
-\@->\spacefactor 
-                 \@m {}
-l.5 sintaxis \(\LaTeX
-                     \) 
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 139.
+[3
+
+] [4
+
+] [5
+
+]
+<Imgs/dado.png, id=53, 255.95625pt x 255.95625pt>
+File: Imgs/dado.png Graphic file (type png)
+<use Imgs/dado.png>
+Package pdftex.def Info: Imgs/dado.png  used on input line 213.
+(pdftex.def)             Requested size: 255.95561pt x 255.95561pt.
+
+Overfull \vbox (139.25853pt too high) detected at line 213
+ []
+
+[6
+
+ <./Imgs/dado.png>] [7
+
+] [8
+
+] [9
+
+] [10
+
+] [11
+
+] [12
+
+] [13
+
+] [14
+
+] [15
+
+] [16
+
+] [17
+
+] [18
+
+] [19
+
+] [20
+
+]
+\openout4 = `Tema11.vrb'.
+
+(./Tema11.vrb
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
+.
+(/home/jesus/.TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)) [21
+
+]
+\openout4 = `Tema11.vrb'.
+
+(./Tema11.vrb
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+25.
+(/home/jesus/.TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)) [22
+
+] [23
+
+] [24
+
+] [25
+
+] [26
+
+]
+\openout4 = `Tema11.vrb'.
+
+(./Tema11.vrb) [27
+
+]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 581.
+
+[28
+
+] [29
+
+]
+<Tema11_files/figure-beamer/unnamed-chunk-1-1.pdf, id=226, 660.4675pt x 435.627
+5pt>
+File: Tema11_files/figure-beamer/unnamed-chunk-1-1.pdf Graphic file (type pdf)
+<use Tema11_files/figure-beamer/unnamed-chunk-1-1.pdf>
+Package pdftex.def Info: Tema11_files/figure-beamer/unnamed-chunk-1-1.pdf  used
+ on input line 613.
+(pdftex.def)             Requested size: 307.29561pt x 202.68434pt.
+[30
+
+ <./Tema11_files/figure-beamer/unnamed-chunk-1-1.pdf>]
+\openout4 = `Tema11.vrb'.
+
+(./Tema11.vrb) [31
+
+] [32
+
+] [33
+
+]
+<Tema11_files/figure-beamer/unnamed-chunk-2-1.pdf, id=260, 660.4675pt x 435.627
+5pt>
+File: Tema11_files/figure-beamer/unnamed-chunk-2-1.pdf Graphic file (type pdf)
+<use Tema11_files/figure-beamer/unnamed-chunk-2-1.pdf>
+Package pdftex.def Info: Tema11_files/figure-beamer/unnamed-chunk-2-1.pdf  used
+ on input line 690.
+(pdftex.def)             Requested size: 307.29561pt x 202.68434pt.
+[34
+
+ <./Tema11_files/figure-beamer/unnamed-chunk-2-1.pdf>]
+\openout4 = `Tema11.vrb'.
+
+(./Tema11.vrb) [35
+
+]
+! Ambiguous; you need another { and }.
+\choose ->\atopwithdelims ()
+                            
+l.731 \end{frame}
+                  
 Here is how much of TeX's memory you used:
- 22594 strings out of 482841
- 407851 string characters out of 5957101
- 642974 words of memory out of 5000000
- 37460 multiletter control sequences out of 15000+600000
- 569569 words of font info for 55 fonts, out of 8000000 for 9000
+ 22379 strings out of 482841
+ 405671 string characters out of 5957101
+ 637356 words of memory out of 5000000
+ 37132 multiletter control sequences out of 15000+600000
+ 573279 words of font info for 59 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 59i,11n,57p,793b,371s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,11n,57p,794b,371s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 !  ==> Fatal error occurred, no output PDF file produced!

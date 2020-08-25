@@ -2,7 +2,8 @@
 title: "Tema 1 - Trabajando con R"
 author: "Juan Gabriel Gomila & María Santos"
 output:
-  beamer_presentation: default
+  beamer_presentation: 
+    keep_tex: yes
   slidy_presentation: default
   ioslides_presentation:
     widescreen: yes
@@ -19,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE, comment = NA)
 ## ¿Qué es R?
 
 <div class="aligncenter"> 
-  ![](Imgs/RLogo.jpg)
+  ![](Imgs/Rlogo.jpg)
 </div>
 
 
@@ -82,7 +83,7 @@ Es un entorno integrado para utilizar y programar con R
 ![](Imgs/RDocumentation.png)
 </div>
 <div class = "aligncenter">
-![](Imgs/Easy.jpg)
+![](Imgs/easy.jpg)
 </div>
 
 ## Cómo pedir ayuda
