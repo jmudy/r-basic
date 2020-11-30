@@ -43,11 +43,11 @@ NaN # Not a Number
 
 0/0
 
-2^50
+2^50 #1.1259e+15 = 1125900000000000
 
-2^-15
+2^-15 #3.051758e-05 = 0.00003051758
 
-c(2^30, 2^-15, 2, 3/2)
+c(2^30, 2^-15, 1, 2, 3/2)
 
 ##FUNCIONES Y COMBINATORIA CON RSTUDIO
 
@@ -64,6 +64,8 @@ log10(1000)
 log(32,2) #operando y base del logaritmo
 
 factorial(7) #numero factorial
+
+factorial(0)
 
 #si tengo 5 platos y me quiero comer 3, cuantas posibilidades tengo?
 choose(5,3) #cociente binomial
