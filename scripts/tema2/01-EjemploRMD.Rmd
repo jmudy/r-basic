@@ -49,7 +49,7 @@ magic(6)
 
 Cuando queremos hacer la raíz cuadrada de dos, podemos hacerlo:
 
-- En $\LaTeX$: $\sqrt{2}$
+- En \LaTeX: $\sqrt{2}$
 - En `R` haciendo `r sqrt(2)`
 - La frase completa: $\sqrt{2}=$ `r sqrt(2)`
 

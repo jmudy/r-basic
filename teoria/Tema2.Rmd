@@ -2,11 +2,11 @@
 title: "Tema 2 - Documentación con R Markdown"
 author: "Juan Gabriel Gomila & María Santos"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     widescreen: yes
     css: JB_style.css
     logo: Imgs/LogoCurso.png
-  beamer_presentation: default
 ---
 
 ```{r setup, include=FALSE}
@@ -32,7 +32,7 @@ Nosotros, en este tema, veremos cómo controlar el comportamiento de los bloques
 
 ## Cómo escribir
 
-Para escribir fórmulas matemáticas bien formateadas utilizaremos la sintaxis $\LaTeX$
+Para escribir fórmulas matemáticas bien formateadas utilizaremos la sintaxis \LaTeX
 
    - Para tener ecuaciones o fórmulas en el mismo párrafo, escribimos nuestro código entre dos símbolos de dólar: `$`código`$`
    - Si queremos tener ecuaciones o fórmulas centradas en un párrafo aparte, escribimos nuestro código entre dos dobles símbolos de dólar:  `$$`código`$$`
@@ -49,11 +49,11 @@ Código: `En en insitituto`$\ \ \ \ \ $ `nos enseñaron que las raíces de las e
 
 Resultado: En en insitituto    nos enseñaron que las raíces de las ecuaciones de tercer grado, de la forma $Ax^3+Bx^2+Cx+D=0$, se encuentran mediante *la Regla de Ruffini*. Por su parte,       las raíces de las ecuaciones de segundo grado de la forma $\alpha x^2+\beta x+\gamma=0$ se encuentran siguiendo la fórmula $$x = \frac{-\beta\pm\sqrt{\beta^2    -4\alpha\gamma}}{2\alpha}$$.
 
-## Símbolos 
+## Símbolos
 
-Hay muchísimos símbolos matemáticos que puedes escribirse con la sintaxis $\LaTeX$. En el ejemplo anterior ya os hemos mostrado unos pocos. En este tema, nosotros solo veremos los más utilizados.
+Hay muchísimos símbolos matemáticos que puedes escribirse con la sintaxis \LaTeX. En el ejemplo anterior ya os hemos mostrado unos pocos. En este tema, nosotros solo veremos los más utilizados.
 
-Para quien quiera ir más allá, aquí os dejamos un [documento muy útil](http://www.ptep-online.com/ctan/symbols.pdf) con gran cantidad de símbolos de $\LaTeX$.
+Para quien quiera ir más allá, aquí os dejamos un [documento muy útil](http://www.ptep-online.com/ctan/symbols.pdf) con gran cantidad de símbolos de \LaTeX.
 
 ## Símbolos matemáticos - Básico
 

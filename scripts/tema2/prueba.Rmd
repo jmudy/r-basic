@@ -1,0 +1,50 @@
+---
+title: "pruebas"
+author: "Jesus"
+date: "1/12/2020"
+output: pdf_document
+---
+
+$\Leftarrow\ \leftarrow \pm\ $ \LaTeX $\frac{23}{x^3}\ a_{i}$
+  
+$$\begin{matrix} a_{11} & a_{12} & a_{13}\\ a_{21} & a_{22} & a_{23} \end{matrix}$$
+
+$$\begin{pmatrix} a_{11} & a_{12} & a_{13}\\ a_{21} & a_{22} & a_{23} \end{pmatrix}$$
+
+$$\begin{Bmatrix} a_{11} & a_{12} & a_{13}\\ a_{21} & a_{22} & a_{23} \end{Bmatrix}$$
+\LaTeX
+
+Vamos a calcular $\sqrt{2} - e^{-2}$:
+```{r miPrimeraChunk, echo=TRUE, eval=TRUE, results='hold'}
+sqrt(2) - exp(-2)
+x = 1:5
+sqrt(x)
+```
+```{r magic, message=FALSE}
+library(magic)
+magic(6)
+```
+```{r car, echo=TRUE,message=TRUE, comment=NA, results='markup'}
+library(car)
+head(cars,3)
+  
+```
+
+Cuando queremos hacer la raíz cuadrada de dos, podemos hacerlo:
+
+- En \LaTeX: $\sqrt{2}$
+- En `R` haciendo `r sqrt(2)`
+- La frase completa: $\sqrt{2}=$ `r sqrt(2)`
+
+El número $\pi$ empieza por `r pi`
+
+La raíz quinta de 32 es `r 32^(1/5)` o, lo que viene siendo lo mismo, $\sqrt[5]{64}=$ `r 32^(1/5)`.
+
+```{r prueba, results='hide', echo=FALSE}
+notas = c(3,5,7,7,9,10,4,7,9)
+media = mean(notas)
+n = length(notas)
+desv.tip = sd(notas)
+```
+
+Este año he hecho $n=$ `r n` exámenes, con una media $\overline{x}=$ `r round(media,2)` y una desviación típica de $s=$ `r round(desv.tip,2)`.

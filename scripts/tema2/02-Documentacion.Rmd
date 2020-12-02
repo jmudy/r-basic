@@ -3,6 +3,7 @@ title: "Documentación de Texto"
 author: "Curso de Estadística Descriptiva"
 date: "21/12/2018"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---

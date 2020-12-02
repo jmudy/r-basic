@@ -127,7 +127,7 @@ floor(sqrt(2)) #redondea a la baja
 ceiling(sqrt(2)) #redondeo a la alza
 trunc(sqrt(2)) #otra forma donde se queda con la parte entera solo, elimina la parte decimal
 
-sqrt(2)^2-2
+sqrt(2)^2-2 #muy muy cercano a cero
 
 2^50
 print(2^50,15)
@@ -139,7 +139,8 @@ round(sqrt(2),4)^2
 round(1.15,1)
 round(1.25,1)
 round(1.35,1)
-round(sqrt(2),0) #si no se indica el numero de digitos decimales lo considera 0 y solo sale la parte entera
+round(sqrt(2),0) #si no se indica el numero de digitos decimales lo considera 0 y solo sale la parte entera más cercana
+?round
 round(digits = 5,sqrt(2))
 
 floor(-3.45)
@@ -168,10 +169,10 @@ hola = 5
 pi.4 = 4*pi
 pi.4
 
-x=2
-x=x^2
+x = 2
+x = x^2
 
-x=sqrt(x)
+x = sqrt(x)
 
 ##FUNCIONES
 
@@ -238,7 +239,7 @@ sqrt(-5) #maaaaal
 sqrt(as.complex(-5))
 
 #La raiz cuadrada devuelve de las dos soluciones la de la
-#Re(z)>0, para obtener la otra, hay que multiplicar por -1
+#parte real positiva --> Re(z)>0, para obtener la otra, hay que multiplicar por -1
 sqrt(3+2i) #z^2 = 3+2i
 exp(3+2i)
 sin(3+2i)
