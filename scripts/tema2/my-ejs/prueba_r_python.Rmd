@@ -1,0 +1,87 @@
+---
+title: "R & Python"
+author: "Jesus"
+date: "2/12/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Reticulate
+
+```{r}
+library(reticulate)
+use_condaenv("r-basic")
+os <- import("os")
+os$listdir(".")
+py_config()
+```
+
+```{python}
+print (sys.version)
+```
+
+```{r}
+source_python("add.py")
+add(3,4)
+```
+
+```{r}
+np <- import("numpy", convert = FALSE)
+
+x <- np$array(c(1:4))
+sum <- x$cumsum()
+
+print(sum)
+
+py_to_r(sum)
+```
+
+## Ayuda
+
+```{r}
+#help(py_to_r)
+#py_help(os$chdir)
+```
+
+## Arrays
+
+```{r}
+a <- np_array(c(1:10), order="C")
+a
+```
+```{r}
+datos <- iris
+head(datos)
+datos_py <- r_to_py(datos)
+```
+
+```{python}
+import numpy as np
+import pandas as pd
+
+r.datos_py.head()
+```
+
+## Sparse Matrix
+
+```{r}
+library(Matrix)
+N <- 6
+set.seed(123)
+sparse_mat <- sparseMatrix(
+  i = sample(N, N, replace = F),
+  j = sample(N, N, replace = F),
+  x = runif(N),
+  dims = c(N, N)
+)
+sparse_mat
+#sparse_mat_py <- r_to_py(sparse_mat)
+```
+
+#```{python}
+#r.sparse_mat_py
+#```
+

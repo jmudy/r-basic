@@ -3,9 +3,9 @@ title: "02-PrimerMarkdown"
 author: "Jesus Mudarra"
 date: "8/23/2020"
 output:
-  pdf_document: default
   html_document:
     df_print: paged
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
