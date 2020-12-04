@@ -1,0 +1,37 @@
+---
+title: "Binomio de Newton"
+author: "Jesus"
+date: "3/12/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# PRODUCTO NOTABLE
+
+La fórmula del producto notable es
+
+$$(a+b)^2 - a^2+2ab+b^2$$
+
+# Función con R
+
+```{r}
+binomioNewtwon2 = function(a,b){
+  a^2+2*a*b+b^2
+}
+binomioNewtwon2(1,2)
+binomioNewtwon2(2,1)
+```
+# BINOMIO DE NEWTWON
+
+$$(a+b)^n = \sum_{k=0}^n {n\choose k}\cdot a^{n-k}\cdot b^k = {n\choose 0}*a^n*b^0+\cdots {n\choose n}*a^0*b^n$$
+# Función con R
+```{r}
+binomioNewtwon = function(a,b,n){
+  cumsum(choose(n,(0:n))*a^{n-(0:n)}*b^(0:n))[n+1]
+}
+binomioNewtwon(2,1,2)
+binomioNewtwon(3,4,14)
+```
