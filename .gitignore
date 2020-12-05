@@ -39,3 +39,5 @@ rsconnect/
 
 ##Deleted by JB 
 .DS_Store
+
+.vscode
