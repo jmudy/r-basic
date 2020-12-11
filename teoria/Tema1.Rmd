@@ -2,13 +2,13 @@
 title: "Tema 1 - Trabajando con R"
 author: "Juan Gabriel Gomila & María Santos"
 output:
-  beamer_presentation: 
-    keep_tex: yes
-  slidy_presentation: default
   ioslides_presentation:
     widescreen: yes
     css: JB_style.css
     logo: Imgs/LogoCurso.png
+  slidy_presentation: default
+  beamer_presentation: 
+    keep_tex: yes
 ---
 
 ```{r setup, include=FALSE}
