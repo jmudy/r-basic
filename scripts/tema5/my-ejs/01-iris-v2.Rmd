@@ -1,0 +1,23 @@
+---
+title: "Data Frames"
+author: "Jesus"
+date: "22/12/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data frame de Iris
+
+```{r}
+df = iris
+head(df, 5)
+tail(df, 5)
+names(df)
+str(df)
+```
+

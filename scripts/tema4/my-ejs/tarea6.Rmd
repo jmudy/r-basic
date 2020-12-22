@@ -1,0 +1,109 @@
+---
+title: "Tarea 6"
+author: "Jesus"
+date: "18/12/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Ejercicio 1
+
+```{r, echo=FALSE}
+curve(x^2-3*x+30,from = -15,to = 15,main = "Una parábola",xlab = "x",ylab = expression(y = x^2-3*x+30),col = "red")
+```
+
+## Ejercicio 2
+
+```{r, echo=FALSE}
+f <- function(x){
+  y=x^2-3*x+30
+}
+
+plot(f,xlim=c(-15,15))
+```
+
+Se obtiene la misma gráfica
+
+```{r,echo=FALSE}
+plot(f,xlim=c(-15,15),main = "Una parábola",xlab = expression(x),ylab = expression(y = x^2-3*x+30),col = "red")
+```
+
+## Ejercicio 3
+
+```{r,echo=FALSE}
+f <- function(x){
+  5*2^x
+}
+curve(f,from = -10,to = 25,main = "Gráfico Semilogarítmico",xlab = expression(x),ylab = expression(5*2^x),col = "purple")
+```
+
+## Ejercicio 4
+
+```{r,echo=FALSE}
+y_1 <- function(x){3*x}
+y_2 <- function(x){-3*x}
+curve(y_1,main = "2 rectas",sub = "Dos rectas con pendiente opuesta",
+      col = "purple",
+      xlim = c(-10,20),
+      ylim = c(-25,25),
+      xlab = "",
+      ylab = ""
+      )
+curve(y_2,col = "green",add = TRUE)
+
+legend(13,10,
+       col = c("purple","green"),
+       legend = c(expression(y_1 = 3*x),expression(y_2 = -3*x)),
+       lwd = 3,
+       bty = "l")
+```
+
+## Ejercicio 5
+
+```{r,echo=FALSE}
+y_1 <- function(x){3*x}
+y_2 <- function(x){-3*x}
+curve(y_1,main = "2 rectas",sub = "Dos rectas con pendiente opuesta",
+      col = "blue",
+      xlim = c(-10,20),
+      ylim = c(-25,25),
+      xlab = "",
+      ylab = ""
+      )
+curve(y_2,col = "green",add = TRUE)
+abline(h=0,col = "red",lwd = 5) # Esta es la línea adicional que hay que introducir
+
+legend(13,10,
+       col = c("blue","green","red"),
+       legend = c(expression(y_1 = 3*x),expression(-3*x),expression(0)),
+       lwd = 3,
+       bty = "l")
+```
+
+## Ejercicio 6
+
+```{r,echo=FALSE}
+y_1 <- function(x){3*x}
+y_2 <- function(x){-3*x}
+y_3 <- function(x){2*x+7}
+
+curve(y_1,main = "2 rectas",sub = "Dos rectas con pendiente opuesta",
+      col = "purple",
+      xlim = c(-10,20),
+      ylim = c(-25,25),
+      xlab = "",
+      ylab = ""
+      )
+curve(y_2,col = "green",add = TRUE)
+abline(h = 0,col = "red",lwd = 5)
+curve(y_3,col = "blue",lwd = 2,add = TRUE)# Esta es la línea adicional que hay que introducir
+
+legend(13,10,
+       col = c("purple","green","red","blue"),
+       legend = c(expression(y_1 = 3*x),expression(-3*x),expression(0),expression(2*x+7)),
+       lwd = 3,
+       bty = "l")
+```

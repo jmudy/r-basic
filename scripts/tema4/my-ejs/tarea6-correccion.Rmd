@@ -1,0 +1,64 @@
+---
+title: "Tarea 6 - correccion"
+author: "Jesus"
+date: "18/12/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Ejercicio 1
+
+```{r, echo=FALSE}
+curve(x^2-3*x+30,-15,15,main="Una parabola", xlab = expression(x),ylab = expression(y=x^2-3*x+30))
+```
+
+## Ejercicio 2
+
+```{r, echo=FALSE}
+f = function(x){x^2-3*x+30}
+
+I = c(-15:15)
+
+#No, la sentencia es incorrecta. La sentencia correcta sería:
+
+plot(I, f(I), type = "l", main = "Una parabola",xlab = expression(x),ylab = expression(y=x^2-3*x+30))
+```
+
+## Ejercicio 3
+
+```{r,echo=FALSE}
+curve(5*2^x,-10,25,log="y", ylab = expression(y = 5*2^x), xlab = "")
+```
+
+## Ejercicio 4
+
+```{r,echo=FALSE}
+curve(3*x,-10,20, xlab = "", ylab="",col="blue", main = "2 rectas", sub = "Dos rectas con pendiente opuesto");
+curve(-3*x,col="green",add=TRUE);
+
+legend(13,10,legend=c("3x","-3x"),lty=c(1,1),col=c("blue","green"))
+```
+
+## Ejercicio 5
+
+```{r,echo=FALSE}
+curve(3*x,-10,20, xlab = "", ylab="",col="blue", main = "2 rectas", sub = "Dos rectas con pendiente opuesto");
+curve(-3*x,col="green",add=TRUE);
+abline(h=0,col="red",lwd = 5)
+
+legend(13,10,legend=c("3x","-3x"),lty=c(1,1),col=c("blue","green"))
+```
+
+## Ejercicio 6
+
+```{r,echo=FALSE}
+curve(3*x,-10,20, xlab = "", ylab="",col="blue", main = "2 rectas", sub = "Dos rectas con pendiente opuesto");
+curve(-3*x,col="green",add=TRUE);
+abline(h=0,col="red",lwd = 5)
+abline(7,2,col="blue",lwd = 2)
+
+legend(13,10,legend=c("3x","-3x"),lty=c(1,1),col=c("blue","green"))
+```
