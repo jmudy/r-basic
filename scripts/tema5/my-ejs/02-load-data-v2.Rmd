@@ -1,0 +1,46 @@
+---
+title: "Carga de DF"
+author: "Jesus"
+date: "7/1/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Carga de ficheros local
+
+
+Breed (1/5/8),
+Sale Price,
+Yearling height at shoulder (in.),
+Fat Free Body (lbs.),
+Percent Fat-free body,
+Frame -- scale from 1 (small) to 8 (large),
+Back fat (in.),
+sale height at shoulder (in.)
+sale weight (lbs.) of three breeds of bulls.
+
+```{r}
+df = read.table("../../../data/bulls.dat",
+                header = FALSE, col.names = c("breed", "sale_price",
+                                              "shoulder", "fat_free",
+                                              "percent_ff", "frame_scale",
+                                              "back_fat", "sale_height",
+                                              "sale_weight"),
+                sep = "", dec = "."
+                )
+head(df)
+str(df)
+```
+
+```{r}
+write.table(df, file = "../../tema5/my-ejs/bulls.txt", dec = ".")
+df2 = read.table("../../tema5/my-ejs/bulls.txt", header = TRUE, dec = ".")
+head(df2)
+```
+
+

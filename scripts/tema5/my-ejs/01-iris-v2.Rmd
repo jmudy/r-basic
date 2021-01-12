@@ -3,8 +3,8 @@ title: "Data Frames"
 author: "Jesus"
 date: "22/12/2020"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -17,7 +17,25 @@ knitr::opts_chunk$set(echo = TRUE)
 df = iris
 head(df, 5)
 tail(df, 5)
-names(df)
+
 str(df)
+names(df) #colnames equivalente en el caso de dataframes
+rownames(df)
+dimnames(df)
+
+dim(df)
+
+df$Sepal.Length[1:10]
+df$Species[1:10]
 ```
+
+## Acceso al DF
+
+```{r}
+df[1:10,]
+df[1:10, 2:4]
+df[df$Species == "setosa" & df$Sepal.Width> 4, ]
+df[df$Species == "setosa" & df$Sepal.Width> 4, ][c(1,3),c(2,5)]
+```
+
 
