@@ -3,8 +3,10 @@ title: "Graficos"
 author: "Curso de Estadística Descriptiva"
 date: "22/12/2018"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
+editor_options: 
+  chunk_output_type: inline
 ---
 
 ```{r setup, include=FALSE}
@@ -108,3 +110,113 @@ legend("bottomright",
        )
 ```
 
+```{r}
+iterations = training_evolution_prueba3$Iterations
+map = training_evolution_prueba3$`mAP @ 0.5 (%)`
+precision = training_evolution_prueba3$`Precision (%)`
+recall = training_evolution_prueba3$`Recall (%)`
+f1score = training_evolution_prueba3$`F-score (%)`
+
+png(filename=paste("C:/Users/mudar/Universidad de Alcala/JesusMudarra-MUII - Documentos/General/results/mAP_iteraciones_YOLOv4/prueba1/map.png",sep=""), width=5, height=5,units="in", res=300, pointsize=12)
+
+plot(iterations,map, xlab = "Iteration number", ylab = "mAP (%)",type = "o", lty = "solid", lwd = 2, col = "mediumpurple4", ylim = c(25,65), pch=20, cex = 1.5, xaxt = "none", yaxt = "none")
+axis(1, seq(0,20000, 2000),las=1, font=2,cex.axis=0.8)
+axis(2, seq(0,65,5),las=2, font=2)
+
+abline(h=seq(0,65,5), v=seq(0,20000, 2000), lty=3, col="lightgray")
+
+abline(v = 10000, lty = "dotted", col = "seagreen")
+abline(h = 60.97, lty = "dotdash", col = "seagreen")
+
+
+dev.off()
+
+
+plot(iterations,precision, xlab = "Iteration number", ylab = "Precision (%)",type = "o", lty = "solid", lwd = 2, col = "goldenrod4", ylim = c(25,65), pch=17, cex = 1.5, xaxt = "none", yaxt = "none")
+axis(1, seq(0,20000, 2000),las=1, font=2,cex.axis=0.8)
+axis(2, seq(0,65,5),las=2, font=2)
+
+abline(h=seq(0,65,5), v=seq(0,20000, 2000), lty=3, col="lightgray")
+
+abline(v = 10000, lty = "dotted", col = "seagreen")
+abline(h = 47.26, lty = "dotdash", col = "seagreen")
+
+
+
+plot(iterations,recall, xlab = "Iteration number", ylab = "Recall (%)",type = "o", lty = "solid", lwd = 2, col = "chocolate4", ylim = c(25,65), pch=18, cex = 1.5, xaxt = "none", yaxt = "none")
+axis(1, seq(0,20000, 2000),las=1, font=2,cex.axis=0.8)
+axis(2, seq(0,65,5),las=2, font=2)
+
+abline(h=seq(0,65,5), v=seq(0,20000, 2000), lty=3, col="lightgray")
+
+abline(v = 10000, lty = "dotted", col = "seagreen")
+abline(h = 55.81, lty = "dotdash", col = "seagreen")
+
+
+
+
+plot(iterations,f1score, xlab = "Iteration number", ylab = "F1-score (%)",type = "o", lty = "solid", lwd = 2, col = "darkslategray", ylim = c(25,65), pch=15, cex = 1.5, xaxt = "none", yaxt = "none")
+axis(1, seq(0,20000, 2000),las=1, font=2,cex.axis=0.8)
+axis(2, seq(0,65,5),las=2, font=2)
+
+abline(h=seq(0,65,5), v=seq(0,20000, 2000), lty=3, col="lightgray")
+
+abline(v = 10000, lty = "dotted", col = "seagreen")
+abline(h = 51.18, lty = "dotdash", col = "seagreen")
+
+
+```
+```{r}
+iterations = training_evolution_prueba1$Iterations
+map = training_evolution_prueba1$`mAP @ 0.5 (%)`
+precision = training_evolution_prueba1$`Precision (%)`
+recall = training_evolution_prueba1$`Recall (%)`
+f1score = training_evolution_prueba1$`F-score (%)`
+
+
+
+plot(iterations,map, xlab = "Iteration number", ylab = "mAP (%)",type = "o", lty = "solid", lwd = 2, col = "mediumpurple4", ylim = c(25,70), pch=20, cex = 1.5, xaxt = "none", yaxt = "none")
+axis(1, seq(0,8000, 1000),las=1, font=2,cex.axis=0.8)
+axis(2, seq(0,70,5),las=2, font=2)
+
+abline(h=seq(0,70,5), v=seq(0,20000, 1000), lty=3, col="lightgray")
+
+abline(v = 2000, lty = "dotted", col = "seagreen")
+abline(h = 66.25, lty = "dotdash", col = "seagreen")
+
+
+
+plot(iterations,precision, xlab = "Iteration number", ylab = "Precision (%)",type = "o", lty = "solid", lwd = 2, col = "goldenrod4", ylim = c(25,70), pch=17, cex = 1.5, xaxt = "none", yaxt = "none")
+axis(1, seq(0,8000, 1000),las=1, font=2,cex.axis=0.8)
+axis(2, seq(0,70,5),las=2, font=2)
+
+abline(h=seq(0,70,5), v=seq(0,20000, 1000), lty=3, col="lightgray")
+
+abline(v = 2000, lty = "dotted", col = "seagreen")
+abline(h = 44.93, lty = "dotdash", col = "seagreen")
+
+
+plot(iterations,recall, xlab = "Iteration number", ylab = "Recall (%)",type = "o", lty = "solid", lwd = 2, col = "chocolate4", ylim = c(25,70), pch=18, cex = 1.5, xaxt = "none", yaxt = "none")
+axis(1, seq(0,8000, 1000),las=1, font=2,cex.axis=0.8)
+axis(2, seq(0,70,5),las=2, font=2)
+
+abline(h=seq(0,70,5), v=seq(0,20000, 1000), lty=3, col="lightgray")
+
+abline(v = 2000, lty = "dotted", col = "seagreen")
+abline(h = 61.17, lty = "dotdash", col = "seagreen")
+
+
+#png(filename=paste("C:/Users/mudar/Universidad de Alcala/JesusMudarra-MUII - Documentos/General/results/mAP_iteraciones_YOLOv4/prueba1/f1score.png",sep=""), width=5, height=5,units="in", res=300, pointsize=12)
+
+plot(iterations,f1score, xlab = "Iteration number", ylab = "F1-score (%)",type = "o", lty = "solid", lwd = 2, col = "darkslategray", ylim = c(25,70), pch=15, cex = 1.5, xaxt = "none", yaxt = "none")
+axis(1, seq(0,8000, 1000),las=1, font=2,cex.axis=0.8)
+axis(2, seq(0,70,5),las=2, font=2)
+
+abline(h=seq(0,70,5), v=seq(0,20000, 1000), lty=3, col="lightgray")
+
+abline(v = 2000, lty = "dotted", col = "seagreen")
+abline(h = 51.81, lty = "dotdash", col = "seagreen")
+
+#dev.off()
+
+```
